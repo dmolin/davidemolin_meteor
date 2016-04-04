@@ -4,7 +4,7 @@ davidemolin.com Website, using MeteorJS, React and Redux!
 This is a work in progress, with the idea of replacing the current production website implemented with Meteor + React + Mantra.
 This new version, still in development, is phasing out Mantra and adopting a full Redux approach for managing UI state.
 
-You can see the current live website [here](https://davidemolin.com)
+You can see the current live website [here](http://davidemolin.com)
 
 ### Technologies Used ###
 
