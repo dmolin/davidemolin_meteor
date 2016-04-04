@@ -1,0 +1,35 @@
+@import 'vars';
+
+.message-overlay {
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  top: -200px;
+  font-size: 1.9rem;
+  letter-spacing: 8px;
+  transition: top 1s ease-out;
+  background: rgba(0,0,0, 0.4);
+  padding: 1em;
+  z-index: 10000;
+  text-align: center;
+
+  &--visible {
+    top: 10%;
+  }
+
+  .message,
+  .tagline {
+    text-shadow: 1px 0px 0px #000;
+  }
+
+  .message {
+    margin-bottom: 0.4em;
+    line-height:normal;
+  }
+
+  .tagline {
+    font-family: @secondaryFont !important;
+    letter-spacing: 5px;
+    font-size: 0.4em;
+  }
+}
