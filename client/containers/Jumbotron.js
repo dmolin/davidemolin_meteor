@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import {slideTo, loadProjectsFactory} from '../actions/jumbotron-actions'
 import {createContainer} from 'meteor/react-meteor-data'
 import * as Collections from '/lib/collections'
+import Spinner from '../components/Spinner'
 
 import Jumbotron from '../components/Jumbotron.js'
 
@@ -18,7 +19,7 @@ export const onPropsChange = (props, onData) => {
   }
 };
 
-const Container = composeWithTracker(onPropsChange)(Jumbotron);
+const Container = composeWithTracker(onPropsChange)(Jumbotron, Spinner);
 
 function mapStateToProps(state) {
   return {
