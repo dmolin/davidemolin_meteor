@@ -13,7 +13,7 @@ class Jumbotron extends React.Component {
       observer:true,
       onTransitionStart: (swiper) => {
         let project = projects[swiper.activeIndex]
-        slideTo(swiper.activeIndex, highestIndex);
+        slideTo(swiper.activeIndex);
       }
     })
   }

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "meteor run",
-    "testonly": "mocha client/**/tests/**/*.js --compilers js:babel-core/register",
+    "testonly": "mocha client/**/tests/**/*Specs.js --compilers js:babel-core/register",
     "test": "npm run testonly",
     "test-watch": "npm run testonly -- --watch --watch-extensions js,jsx"
   },

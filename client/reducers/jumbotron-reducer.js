@@ -6,11 +6,11 @@ export const initialState = {
 }
 
 export default function(state = initialState, action) {
-  const {activeIndex, highestIndex, type} = action;
+  const {activeIndex, type} = action;
   
   switch(type) {
     case JUMBOTRON_SLIDE:
-      return Object.assign({}, state, {activeIndex: activeIndex, highestIndex:(activeIndex > highestIndex ? activeIndex : highestIndex) })
+      return Object.assign({}, state, {activeIndex: activeIndex, highestIndex:(activeIndex > state.highestIndex ? activeIndex : state.highestIndex) })
     default:
       return state
   }
