@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialIcons from './SocialIcons.jsx';
+import SocialIcons from './SocialIcons';
 
 export default (props) => (
   <section className="get-in-touch section" {...props}>

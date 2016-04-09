@@ -1,5 +1,5 @@
 import React from 'react';
-import SocialIcons from './SocialIcons.jsx';
+import SocialIcons from './SocialIcons';
 
 class AboutMe extends React.Component {
   render() {

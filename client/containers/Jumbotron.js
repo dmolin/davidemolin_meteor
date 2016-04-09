@@ -10,8 +10,8 @@ import Jumbotron from '../components/Jumbotron.js'
 
 import {composeWithTracker} from 'react-komposer';
 
+//first, create the React-komposer Meteor container...
 export const onPropsChange = (props, onData) => {
-  console.log("props", props);
   if(Meteor.subscribe('projects.featured').ready()) {
     const projects = Collections.FeaturedProjects.find({}, {sort:{priority:-1, createdAt:-1}}).fetch() || [];
     console.log("subscription ready. projects", projects)
@@ -21,6 +21,7 @@ export const onPropsChange = (props, onData) => {
 
 const Container = composeWithTracker(onPropsChange)(Jumbotron, Spinner);
 
+//then, wrap the Meteor container into a Redux container, to get access to dispatch 
 function mapStateToProps(state) {
   return {
     ...state.jumbotron
