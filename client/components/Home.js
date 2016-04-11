@@ -8,9 +8,11 @@ import LatestWorks from '../containers/LatestWorks'
 import MyValues from '../components/MyValues'
 import GetInTouch from '../components/GetInTouch'
 import Footer from '../components/Footer'
+import MessageOverlay from '../components/MessageOverlay'
 
 const Home = ({content = () => null}) => (
   <section className="home" data-id="home">
+    <MessageOverlay />
     <Jumbotron />
     <AboutMe data-id="about-me"/>
     <Testimonials data-id="testimonials" />
