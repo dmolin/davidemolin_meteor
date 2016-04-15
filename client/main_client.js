@@ -10,7 +10,8 @@ import { syncHistoryWithStore } from 'react-router-redux'
 const routes = {
   component: MainLayout,
   path: '/',
-  indexRoute: { component: Home }
+  indexRoute: { component: Home },
+  onEnter: ({location}) => GAnalytics.pageview(location.path)
 }
 
 const store = configureStore()
