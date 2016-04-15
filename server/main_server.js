@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import publications from './publications';
 import * as Collections from '../lib/collections';
+import moment from 'moment';
 
 Meteor.startup(() => {
   console.log("Bootstrapping the DB...");

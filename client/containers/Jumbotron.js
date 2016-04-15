@@ -2,7 +2,6 @@ import React from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {slideTo} from '../actions/jumbotron-actions'
-import {createContainer} from 'meteor/react-meteor-data'
 import * as Collections from '/lib/collections'
 import Spinner from '../components/Spinner'
 
