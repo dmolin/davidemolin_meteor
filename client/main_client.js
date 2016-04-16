@@ -1,17 +1,25 @@
 import React from 'react'
 import {render} from 'react-dom'
 import {Provider} from 'react-redux'
-import {Router, browserHistory} from 'react-router'
+import {Router, browserHistory, Route, Routes, IndexRoute} from 'react-router'
 import MainLayout from './components/MainLayout'
 import Home from './components/Home'
+import NotFound from './components/NotFound'
 import configureStore from './store'
 import { syncHistoryWithStore } from 'react-router-redux'
 
-const routes = {
+const routes = [{
   component: MainLayout,
   path: '/',
   indexRoute: { component: Home },
-  onEnter: ({location}) => GAnalytics.pageview(location.path)
+  onEnter: ({location}) => GAnalytics.pageview(location.path),
+  childRoutes: []
+}, {
+  path:'*', component: NotFound
+}]
+
+function onRouteEnter(location) {
+  GAnalytics.pageview(location.path)
 }
 
 const store = configureStore()

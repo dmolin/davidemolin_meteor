@@ -1,5 +1,5 @@
 import React from 'react'
-import Project from './Project.jsx'
+import Project from './Project'
 
 class LatestWorks extends React.Component {
   componentDidMount() {
