@@ -16,5 +16,5 @@ This project is phasing out the old MeteorJS Mantra-based version (you can find 
 - Unit Testing with Enzyme, Mocha and Chai
 - mupx (Meteor Up) for production deployments
 
-![ScreenShot](/README/davidemolin.png?raw=true)
+![ScreenShot](/README/davidemolin-screenshot.png?raw=true)
 
