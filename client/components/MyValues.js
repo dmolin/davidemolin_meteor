@@ -34,9 +34,8 @@ class MyValues extends React.Component {
             <ul>
               <li className="my-values-item"><strong>No</strong> Traveling</li>
               <li className="my-values-item">I'm not interested in permanent opportunities. </li>
-              <li className="my-values-item">I don't spend more than 8-9 hours/day at the office (but I can continue working from home). </li>
-              <li className="my-values-item"><strong>No</strong> writing code without unit tests</li>
-              <li className="my-values-item"><strong>No</strong> Agile Alliance pair-programming (it's not for me)</li>
+              <li className="my-values-item">I try to avoid more than 9 hours/day at the office (but I can continue working from home if necessary)</li>
+              <li className="my-values-item">I'm not a fan of the practice of <a href="https://en.wikipedia.org/wiki/Pair_programming" target="_blank">"Agile Alliance XP pair-programming"</a> (this is not the same as 'working with a colleague".. I love that!)</li>
               <li className="my-values-item"><strong>Preferably No MS Windows</strong></li>
             </ul>
           </section>
