@@ -15,11 +15,9 @@ class MyValues extends React.Component {
             <h2>Happy days!</h2>
 
             <ul>
-              <li className="my-values-item">Working in Central London</li>
               <li className="my-values-item">Having the time to balance work and private life</li>
               <li className="my-values-item">SCRUM/Kanban</li>
               <li className="my-values-item">Let's do-it approach</li>
-              <li className="my-values-item">Problem solving attitudes</li>
               <li className="my-values-item">Flat/horizontal hierarchies</li>
               <li className="my-values-item">Unit Testing</li>
               <li className="my-values-item">Apple Macs & Linux</li>
@@ -30,8 +28,7 @@ class MyValues extends React.Component {
             <h2>Sad face</h2>
 
             <ul>
-              <li className="my-values-item">Traveling (please don't!)</li>
-              <li className="my-values-item">Working more than 9 hours/day at the office (I can, but I prefer continuing working from home if necessary)</li>
+              <li className="my-values-item">Traveling (no please!)</li>
               <li className="my-values-item">The practice of <a className="link" href="https://en.wikipedia.org/wiki/Pair_programming" target="_blank">"Agile Alliance XP pair-programming"</a> (this is not the same as 'working with a colleague".. I love that!)</li>
               <li className="my-values-item">The use of MS Windows</li>
             </ul>
