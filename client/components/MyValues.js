@@ -31,7 +31,7 @@ class MyValues extends React.Component {
 
             <ul>
               <li className="my-values-item">Traveling (please don't!)</li>
-              <li className="my-values-item">Working more than 9 hours/day at the office (but I can continue working from home, no probl. with that)</li>
+              <li className="my-values-item">Working more than 9 hours/day at the office (I can, but I prefer continuing working from home if necessary)</li>
               <li className="my-values-item">The practice of <a className="link" href="https://en.wikipedia.org/wiki/Pair_programming" target="_blank">"Agile Alliance XP pair-programming"</a> (this is not the same as 'working with a colleague".. I love that!)</li>
               <li className="my-values-item">The use of MS Windows</li>
             </ul>
