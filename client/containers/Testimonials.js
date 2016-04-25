@@ -9,7 +9,7 @@ import {composeWithTracker} from 'react-komposer';
 //first, create the React-komposer Meteor container...
 export const onPropsChange = (props, onData) => {
   if(Meteor.subscribe('testimonials').ready()) {
-    const testimonials = Collections.Testimonials.find({},{sort:{at:-1}}).fetch();
+    const testimonials = Collections.Testimonials.find({},{sort:{priority:-1, at:-1}}).fetch();
     onData(null, {testimonials});
   }
 };

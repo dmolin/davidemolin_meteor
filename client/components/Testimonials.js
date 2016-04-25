@@ -45,7 +45,8 @@ class Testimonials extends React.Component {
                       <i className="testimonial-recommendation--close fa fa-quote-right"></i>
                     </p>
                     <footer>
-                      <span className="testimonial-tagline"><Time value={t.at} format="DD/MM/YYYY" />, {t.relationship}</span>
+                      {/* <span className="testimonial-tagline"><Time value={t.at} format="DD/MM/YYYY" />, {t.relationship}</span>*/}
+                      <span className="testimonial-tagline">{t.relationship}</span>
                     </footer>
                   </section>
                 )
