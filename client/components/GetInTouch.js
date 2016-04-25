@@ -8,7 +8,7 @@ export default (props) => (
         <h1 className="section-title">Get in touch</h1>
       </header>
       <div className="section-content">
-        <p>Interested in my services? Please get in touch! shoot me an email at <a href="mailto:davide@codingshack.com">davide@codingshack.com</a> or reach out to me through my social links!</p>
+        <p>It would be great to have the opportunity to work with your team! If you think my skillsets can be a good fit for your project, please do get in touch! shoot me an email at <a href="mailto:davide@codingshack.com">davide@codingshack.com</a> or reach out to me through my social links!</p>
 
         <SocialIcons />
 
