@@ -32,7 +32,7 @@ function insertProjects() {
     title:'davidemolin.com (Meteor + React + Redux)',
     description:[
       "My own website, created with the new version of MeteorJS (1.3), along with React and Redux",
-      "Meteor allows for a true realtime UI and isomorphic codebase, while React simplify and rationalise the data flow and the application state management"
+      "Meteor allows for a true realtime UI and isomorphic codebase, while React simplifies and rationalises the data flow and the application state management"
     ],
     technologies:['MeteorJS_1.3', 'React', 'Redux'],  //in case I want to list the techs used for this project,
     image: 'projects/davidemolin.png',
