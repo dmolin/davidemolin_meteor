@@ -2,7 +2,7 @@ import React from 'react'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {slideTo} from '../actions/jumbotron-actions'
-import * as Collections from '/lib/collections'
+import * as Collections from '../../lib/collections'
 import Spinner from '../components/Spinner'
 
 import Jumbotron from '../components/Jumbotron.js'

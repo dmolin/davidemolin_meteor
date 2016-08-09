@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import LatestWorks from '../components/LatestWorks';
 import Spinner from '../components/Spinner';
-import * as Collections from '/lib/collections'
+import * as Collections from '../../lib/collections'
 import {composeWithTracker} from 'react-komposer';
 
 //first, create the React-komposer Meteor container...

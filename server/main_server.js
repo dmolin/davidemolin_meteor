@@ -16,7 +16,8 @@ Meteor.startup(() => {
 
 function insertFeaturedProjects() {
   Collections.FeaturedProjects.remove({})
-  Collections.FeaturedProjects.insert({imageBg:'jumbotron/payfriendz-bg.jpg', imageFg:'jumbotron/payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:1000})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/economist-bg.jpg', imageFg:'jumbotron/economist-fg.png', description:'', fgSize:'auto 100%', bgColor: '#e5e5e5', priority:1000})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/payfriendz-bg.jpg', imageFg:'jumbotron/payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:999})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/bodog-bg.jpg', imageFg:'jumbotron/bodog-fg.png', description:'', fgSize:'auto 90%', bgColor:'#3b3b3b', priority:991})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/x-plane-bg.jpg', imageFg: 'jumbotron/x-plane-fg.png', fgSize:'auto 70%', bgColor: '#0f2a45', priority:990})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/udemy-bg.jpg', imageFg:'jumbotron/udemy-fg.png', description:'', fgSize:'auto 70%', bgColor:'#fff', priority:980})
