@@ -27,6 +27,9 @@ class AboutMe extends React.Component {
 
               <h2>technologies I've been working with</h2>
               <ul className="taglist cf">
+                <li className="taglist__item">React</li>
+                <li className="taglist__item">Redux</li>
+                <li className="taglist__item">ES6</li>
                 <li className="taglist__item">MeteorJS</li>
                 <li className="taglist__item">Unit Testing</li>
                 <li className="taglist__item">AngularJs</li>
@@ -45,8 +48,9 @@ class AboutMe extends React.Component {
 
               <h2>technologies I'm addressing at the moment</h2>
               <ul className="taglist cf">
-                <li className="taglist__item">MeteorJS 1.3</li>
                 <li className="taglist__item">React + Redux</li>
+                <li className="taglist__item">GraphQL</li>
+                <li className="taglist__item">MeteorJS 1.3</li>
               </ul>
             </div>
 
