@@ -2,16 +2,33 @@ import React from 'react'
 import Project from './Project'
 
 class LatestWorks extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.swiper = null;
+    this.onProjectImageLoaded = this.onProjectImageLoaded.bind(this);
+  }
+
   componentDidMount() {
-    var mySwiper = new Swiper ('.latest-works .swiper-container', {
+    this.swiper = new Swiper ('.latest-works .swiper-container', {
       pagination: '.swiper-pagination',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       lazyLoading: true,
       preloadImages: false,
       lazyLoadingInPrevNext: true,
-      observer:true
+      observer:true,
+      autoHeight: true
     })
+  }
+
+  componentWillUnmount() {
+    this.swiper.destroy();
+    this.swiper = null;
+  }
+
+  onProjectImageLoaded() {
+    // recompute swiper container size
+    this.swiper.update();
   }
 
   render() {
@@ -35,7 +52,7 @@ class LatestWorks extends React.Component {
                 const preload = index === 0;
                 return (
                   <div className="section-content swiper-slide pure-grid" key={p._id}>
-                      <Project preload={preload} {...p} />
+                      <Project preload={preload} {...p} onImageLoaded={this.onProjectImageLoaded} />
                   </div>
                 )
               })}

@@ -2,15 +2,27 @@ import React from 'react';
 import Time from 'react-time';
 
 class Testimonials extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.swiper;
+  }
+
   componentDidMount() {
-    var mySwiper = new Swiper ('.testimonials .swiper-container', {
+    this.swiper = new Swiper ('.testimonials .swiper-container', {
       pagination: '.swiper-pagination',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
       preloadImages: false,
       lazyLoading: true,
-      observer:true
+      observer:true,
+      grabCursor:true,
+      autoHeight: true
     })
+  }
+
+  componentWillUnmount() {
+    this.swiper.destroy();
+    this.swiper = null;
   }
 
   render () {
@@ -28,13 +40,13 @@ class Testimonials extends React.Component {
             <div className="swiper-button-prev"></div>
             <div className="swiper-button-next"></div>
             <div className="swiper-wrapper section-content pure-grid testimonials-content">
-              {testimonials.map((t) => {
-                return (
+              {testimonials.map((t) => (
                   <section className="testimonial pure-u-1 swiper-slide" key={t._id}>
                     <header>
                       <div className="testimonial-profile-picture-wrapper cameo">
                         <div className="swiper-lazy-preloader" />
-                        <img className="testimonial-profile-picture cameo pure-img swiper-lazy" data-src={"/images/profiles/" + t.avatar} />
+                        <img className="testimonial-profile-picture cameo pure-img swiper-lazy" 
+                             data-src={"/images/profiles/" + t.avatar} />
                       </div>
                       <p className="testimonial-data testimonial-name">{t.name}</p>
                       <p className="testimonial-data">{t.title}</p>
@@ -45,12 +57,10 @@ class Testimonials extends React.Component {
                       <i className="testimonial-recommendation--close fa fa-quote-right"></i>
                     </p>
                     <footer>
-                      {/* <span className="testimonial-tagline"><Time value={t.at} format="DD/MM/YYYY" />, {t.relationship}</span>*/}
                       <span className="testimonial-tagline">{t.relationship}</span>
                     </footer>
                   </section>
-                )
-              })}
+                ))}
             </div>
           </div>
         </div>

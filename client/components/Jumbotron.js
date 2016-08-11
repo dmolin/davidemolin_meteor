@@ -2,10 +2,15 @@ import React from 'react';
 
 
 class Jumbotron extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.swiper = null;
+  }
+
   componentDidMount() {
     let {projects, slideTo, highestIndex} = this.props;
 
-    var mySwiper = new Swiper ('.jumbotron .swiper-container', {
+    this.swiper = new Swiper ('.jumbotron .swiper-container', {
       pagination: '.swiper-pagination',
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
@@ -14,8 +19,17 @@ class Jumbotron extends React.Component {
       onTransitionStart: (swiper) => {
         let project = projects[swiper.activeIndex]
         slideTo(swiper.activeIndex);
-      }
+      },
+      autoplay: 5000,
+      autoplayDisableOnInteraction: false,
+      keyboardControl: true,
+      speed: 500
     })
+  }
+
+  componentWillUnmount() {
+    this.swiper.destroy();
+    this.swiper = null;
   }
 
   render() {
@@ -31,7 +45,6 @@ class Jumbotron extends React.Component {
           <div className="swiper-button-next"></div>
           <div className="swiper-wrapper">
             {projects.map((project,index) => {
-              //let bgStyleValue = "url(/images/projects/bgtile.jpg) center top repeat";
               let bgStyleValue = "none";
               if(index <= highestIndex+1 ) {
                 bgStyleValue = "url(/images/projects/" + project.imageBg + ") center top no-repeat";

@@ -13,7 +13,6 @@ import {composeWithTracker} from 'react-komposer';
 export const onPropsChange = (props, onData) => {
   if(Meteor.subscribe('projects.featured').ready()) {
     const projects = Collections.FeaturedProjects.find({}, {sort:{priority:-1, createdAt:-1}}).fetch() || [];
-    console.log("subscription ready. projects", projects)
     onData(null, Object.assign({}, props, {projects}));
   }
 };

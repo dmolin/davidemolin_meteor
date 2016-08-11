@@ -1,6 +1,17 @@
 import React from 'react'
 
 class Project extends React.Component {
+  constructor(...args) {
+    super(...args);
+    this.onImageLoaded = this.onImageLoaded.bind(this);
+  }
+
+  onImageLoaded() {
+    if (this.props.onImageLoaded && typeof this.props.onImageLoaded === 'function') {
+      this.props.onImageLoaded();
+    }
+  }
+
   render() {
     const {image, title, description, githubUrl, liveUrl, prodUrl, liveLabel, videoUrl, itunesUrl, preload} = this.props
 
@@ -12,9 +23,9 @@ class Project extends React.Component {
     let imageTag
 
     if(preload) {
-      imageTag = <img src={`/images/${image}`} className="pure-img pure-u-1 pure-u-lg-2-3 swiper-lazy"/>
+      imageTag = <img src={`/images/${image}`} className="pure-img pure-u-1 pure-u-lg-2-3 swiper-lazy" onLoad={this.onImageLoaded} />
     } else {
-      imageTag = <img data-src={`/images/${image}`} className="pure-img pure-u-1 pure-u-lg-2-3 swiper-lazy"/>
+      imageTag = <img data-src={`/images/${image}`} className="pure-img pure-u-1 pure-u-lg-2-3 swiper-lazy" onLoad={this.onImageLoaded} />
     }
 
     if(githubUrl) {
