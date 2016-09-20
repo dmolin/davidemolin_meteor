@@ -154,6 +154,12 @@ function insertProjects() {
 function insertTestimonials() {
   Collections.Testimonials.remove({})
   Collections.Testimonials.insert({
+    avatar:'profile-ygreen.jpg', name:'Yasmin Green', title:'Junior Web Developer',
+    recommendation: 'Davide was a pleasure to work with and I have learnt a lot from him from my short time working with him. He is always excited to learn and try new technologies and was always telling me about them (like Meteor!). He also wears fantastic t-shirts and buys amazing cakes!',
+    at:moment('2016-08-22','YYYY-MM-DD').toDate(), relationship:'Yasmin worked with Davide at The Economist',
+    priority: 991
+  });
+  Collections.Testimonials.insert({
     avatar:'profile-jhayward.jpg', name:'Julia Hayward', title:'Senior Agile Project Manager at Daily Mail',
     recommendation:'Davide is an excellent front end / full stack web developer and I would highly recommend him. He immediately hit the ground running working on a challenging project that he executed brilliantly. He works in a very professional manner, he is friendly, collaborative and has a can do attitude. His level of expertise was second to none and I would not hesitate to hire him again.',
     at:moment('2015-08-12', 'YYYY-MM-DD').toDate(), relationship:'Julia managed Davide at MailOnline',
