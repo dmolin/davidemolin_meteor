@@ -79,6 +79,18 @@ function insertProjects() {
   })
 
   Collections.Projects.insert({
+    title: 'Front-End Development course',
+    description: [
+      "With Udemy I authored a foundational course on Front-End Development, covering the basics of HTML, CSS, Javascript, jQuery",
+      " and introducing the student to building single page Apps within an MVC framework, using Backbone. The course introduces also Unit testing with Mocha"
+    ],
+    technologies: ['HTML', 'CSS', 'Javascript', 'jQuery', 'Backbone', 'Mocha'],
+    prodUrl: 'https://www.udemy.com/foundations-of-front-end-development',
+    image: 'projects/udemy-fofed.png',
+    priority: 965
+  })
+
+  Collections.Projects.insert({
     title:'Admin Dashboard (AngularJS)',
     description:[
       "A very basic project that I use as a generic template when building Admin/Backoffice applications.",
