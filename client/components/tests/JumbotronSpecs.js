@@ -55,7 +55,7 @@ describe('jumbotron.components.Jumbotron', () => {
 
   it('should use the current active item for the jumbotron background color', () => {
     const projects = [_buildProject(1), _buildProject(2), _buildProject(3), _buildProject(4)]
-    let el = shallow(<Jumbotron projects={projects} currentIndex={2} />)
+    let el = shallow(<Jumbotron projects={projects} activeIndex={2} />)
 
     //check that the background color is the one set for the project at index=2
     expect(el.find('.jumbotron').node.props.style.backgroundColor).to.equal('bgColorCode3')
@@ -63,8 +63,7 @@ describe('jumbotron.components.Jumbotron', () => {
 
 });
 
-function _buildProject(suffix) {
-  suffix = suffix || ''
+function _buildProject(suffix = '') {
   return {
     _id: 1,
     imageFg:'fgImageUrl' + suffix,

@@ -6,7 +6,7 @@ import moment from 'moment';
 Meteor.startup(() => {
   console.log("Bootstrapping the DB...");
 
-  //for testing only
+  //This is only TEMPORARY. DB loading will be handled externally
   insertFeaturedProjects()
   insertProjects()
   insertTestimonials()
@@ -14,8 +14,10 @@ Meteor.startup(() => {
   publications();
 })
 
+/* All this code will be removed once DB loading is handled via scripts */
 function insertFeaturedProjects() {
   Collections.FeaturedProjects.remove({})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/hubro-bg.jpg', imageFg:'jumbotron/hubro-fg.png', description:'', fgSize:'auto 100%', bgColor: '#e5e5e5', priority:1000})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/economist-bg.jpg', imageFg:'jumbotron/economist-fg.png', description:'', fgSize:'auto 100%', bgColor: '#e5e5e5', priority:1000})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/payfriendz-bg.jpg', imageFg:'jumbotron/payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:999})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/bodog-bg.jpg', imageFg:'jumbotron/bodog-fg.png', description:'', fgSize:'auto 90%', bgColor:'#3b3b3b', priority:991})
@@ -30,9 +32,31 @@ function insertFeaturedProjects() {
 function insertProjects() {
   Collections.Projects.remove({})
   Collections.Projects.insert({
+    title: 'New Hubro Simulator',
+    description: [
+      "With the guys at Hubro.education we've been pretty busy in re-writing the current Hubro Business Simulator into a new fantastic reactive realtime application, using MeteorJS and React"
+    ],
+    technologies: ['React 15', 'MeteorJS'],
+    image: 'projects/hubro.jpg',
+    prodUrl: 'https://hubro.education/en/',
+    priority: 1020
+  }, {
+    title: 'React+Redux Bookstore (Techtest)',
+    description: [
+      "A simple Books browsing/querying with 1 Million records. This app, created for a take-home test, allows you to browse through 1 Million auto-generated books (with funny fictional titles)",
+      "The books are stored in a NoSQL in-memory DB. The Generator script is also included in the source tree"
+    ],
+    technologies: ['React 15', 'Redux', 'NodeJS', 'TingoDB', 'BabelJs', 'Webpack', 'Express', 'Node Fibers', 'Mocha/Chai + Sinon'],
+    image: 'projects/books.jpg',
+    githubUrl: 'https://github.com/dmolin/techtest-books',
+    liveUrl: 'http://books.davidemolin.com',
+    priority: 1010
+  })
+
+  Collections.Projects.insert({
     title:'davidemolin.com (Meteor + React + Redux)',
     description:[
-      "My own website, created with the new version of MeteorJS (1.3), along with React and Redux",
+      "My own website, created with the new version of MeteorJS (1.4), along with React and Redux",
       "Meteor allows for a true realtime UI and isomorphic codebase, while React simplifies and rationalises the data flow and the application state management"
     ],
     technologies:['MeteorJS_1.3', 'React', 'Redux'],  //in case I want to list the techs used for this project,

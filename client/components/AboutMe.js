@@ -50,8 +50,16 @@ class AboutMe extends React.Component {
               <ul className="taglist cf">
                 <li className="taglist__item">React + Redux</li>
                 <li className="taglist__item">GraphQL</li>
-                <li className="taglist__item">MeteorJS 1.3</li>
+                <li className="taglist__item">MeteorJS 1.4</li>
               </ul>
+
+              <h2>technologies in my TODO list</h2>
+              <ul className="taglist cf">
+                <li className="taglist__item">Elm</li>
+                <li className="taglist__item">GraphQL</li>
+                <li className="taglist__item">??Next big thing??</li>
+              </ul>
+
             </div>
 
             <SocialIcons />
