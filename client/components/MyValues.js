@@ -20,7 +20,7 @@ class MyValues extends React.Component {
               <li className="my-values-item">Let's do-it approach</li>
               <li className="my-values-item">Flat/horizontal hierarchies</li>
               <li className="my-values-item">Unit Testing</li>
-              <li className="my-values-item">Linux, tmux and Vim!</li>
+              <li className="my-values-item">Linux, tmux and Emacs!</li>
               <li className="my-values-item">Apple Mac (if Linux is a no-go)</li>
               <li className="my-values-item">Remote working and flexi time(a <strong>VERY HAPPY</strong> puppy!)</li>
             </ul>

@@ -17,7 +17,7 @@ Meteor.startup(() => {
 /* All this code will be removed once DB loading is handled via scripts */
 function insertFeaturedProjects() {
   Collections.FeaturedProjects.remove({})
-  Collections.FeaturedProjects.insert({imageBg:'jumbotron/hubro-bg.jpg', imageFg:'jumbotron/hubro-fg.png', description:'', fgSize:'auto 100%', bgColor: '#e5e5e5', priority:1000})
+  Collections.FeaturedProjects.insert({imageBg:'jumbotron/hubro-bg.jpg', imageFg:'jumbotron/hubro-fg.png', description:'', fgSize:'auto 100%', bgColor: '#12514b', priority:1001})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/economist-bg.jpg', imageFg:'jumbotron/economist-fg.png', description:'', fgSize:'auto 100%', bgColor: '#e5e5e5', priority:1000})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/payfriendz-bg.jpg', imageFg:'jumbotron/payfriendz-fg.png', description:'', fgSize:'auto 50%', bgColor: '#000', priority:999})
   Collections.FeaturedProjects.insert({imageBg:'jumbotron/bodog-bg.jpg', imageFg:'jumbotron/bodog-fg.png', description:'', fgSize:'auto 90%', bgColor:'#3b3b3b', priority:991})
@@ -40,7 +40,9 @@ function insertProjects() {
     image: 'projects/hubro.jpg',
     prodUrl: 'https://hubro.education/en/',
     priority: 1020
-  }, {
+  })
+
+  Collections.Projects.insert({
     title: 'React+Redux Bookstore (Techtest)',
     description: [
       "A simple Books browsing/querying with 1 Million records. This app, created for a take-home test, allows you to browse through 1 Million auto-generated books (with funny fictional titles)",
@@ -54,18 +56,6 @@ function insertProjects() {
   })
 
   Collections.Projects.insert({
-    title:'davidemolin.com (Meteor + React + Redux)',
-    description:[
-      "My own website, created with the new version of MeteorJS (1.4), along with React and Redux",
-      "Meteor allows for a true realtime UI and isomorphic codebase, while React simplifies and rationalises the data flow and the application state management"
-    ],
-    technologies:['MeteorJS_1.3', 'React', 'Redux'],  //in case I want to list the techs used for this project,
-    image: 'projects/davidemolin.png',
-    githubUrl: 'https://github.com/dmolin/www.davidemolin.com-react-redux',
-    priority: 1000
-  })
-
-  Collections.Projects.insert({
     title:'payfriendz mobile App (MeteorJS)',
     description:[
       "With the Payfriendz team we built the new mobile realtime App that makes sending/receiving money easy as 123!",
@@ -74,20 +64,19 @@ function insertProjects() {
     technologies:['MeteorJS'],  //in case I want to list the techs used for this project,
     image: 'projects/payfriendz-meteor.png',
     itunesUrl: 'https://itunes.apple.com/gb/app/payfriendz-send-request-money/id666006195?mt=8',
-    priority: 990
+    priority: 1000
   })
 
   Collections.Projects.insert({
-    title:'Kanban React',
+    title:'davidemolin.com (Meteor + React + Redux)',
     description:[
-      "A small project I built while studying React.",
-      "The project was built using React and Flux and intentionally mimicks the look and feel of Trello. You can add/remove columns and cards, reorder them and drag and drop columns and cards around the board"
+      "My own website, created with the new version of MeteorJS (1.4), along with React and Redux",
+      "Meteor allows for a true realtime UI and isomorphic codebase, while React simplifies and rationalises the data flow and the application state management"
     ],
-    technologies:'',  //in case I want to list the techs used for this project,
-    githubUrl: 'https://github.com/dmolin/react-kanban',
-    liveUrl: 'http://dmolin.github.io/react-kanban/',
-    image: 'projects/kanban-react.png',
-    priority: 980
+    technologies:['MeteorJS_1.3', 'React', 'Redux'],  //in case I want to list the techs used for this project,
+    image: 'projects/davidemolin.png',
+    githubUrl: 'https://github.com/dmolin/www.davidemolin.com-react-redux',
+    priority: 990
   })
 
   Collections.Projects.insert({
@@ -112,6 +101,19 @@ function insertProjects() {
     prodUrl: 'https://www.udemy.com/foundations-of-front-end-development',
     image: 'projects/udemy-fofed.png',
     priority: 965
+  })
+
+  Collections.Projects.insert({
+    title:'Kanban React',
+    description:[
+      "A small project I built while studying React.",
+      "The project was built using React and Flux and intentionally mimicks the look and feel of Trello. You can add/remove columns and cards, reorder them and drag and drop columns and cards around the board"
+    ],
+    technologies:'',  //in case I want to list the techs used for this project,
+    githubUrl: 'https://github.com/dmolin/react-kanban',
+    liveUrl: 'http://dmolin.github.io/react-kanban/',
+    image: 'projects/kanban-react.png',
+    priority: 962
   })
 
   Collections.Projects.insert({

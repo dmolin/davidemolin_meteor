@@ -20,10 +20,10 @@ class AboutMe extends React.Component {
               <p className="testimonial-data">Have a look at my <a className="link" target="_blank" href="https://www.linkedin.com/in/davidemolin">LinkedIn profile</a></p>
             </div>
             <div className="about-me-content pure-u-1 pure-u-md-2-3 pure-u-lg-3-4">
-              <p>Hi, I’m Davide and CodingShack is the company I founded to provide professional Development services to my clients.</p>
-              <p>I’m a Front End Developer (with a bit of Fullstack too), with a passion for Web Standards, Javascript programming, Front End Development in general and the World Wide Web.</p>
+              <p>Hi, I’m Davide, nice to meet you!</p>
+              <p>I’m a Front End Developer (with a mix of Fullstack too), with a passion for Javascript programming, Front End Development, new technologies and solving problems one keystroke at a time.</p>
               <p>I've been writing code professionally since 1995, starting with C and C++, then Java Web development (in 2001), eventually falling in love with Front End development and dynamic languages (since 2004).</p>
-              <p>Nowaday I specialise in Front-End and FullStack Development and offer consultancy in this space. I love technology, frameworks, design patterns and making the world a better place through the use of technology. I'm always up for learning new stuff.</p>
+              <p>Nowaday I focus on Front-End and FullStack Development. I love technology, frameworks, crafting great applications and making the world a better place through the use of technology. I'm always up for learning new stuff.</p>
 
               <h2>technologies I've been working with</h2>
               <ul className="taglist cf">
@@ -48,8 +48,7 @@ class AboutMe extends React.Component {
 
               <h2>technologies I'm addressing at the moment</h2>
               <ul className="taglist cf">
-                <li className="taglist__item">React + Redux</li>
-                <li className="taglist__item">GraphQL</li>
+                <li className="taglist__item">React</li>
                 <li className="taglist__item">MeteorJS 1.4</li>
               </ul>
 
